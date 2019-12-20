@@ -7,7 +7,7 @@
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
 {{ $editURL := printf "%s/edit/master/content/%s" $gh_repo $pathFormatted }}
 {{ if $gh_subdir }}
-{{ $editURL = printf "%s/edit/master/%s/%s" $gh_repo $gh_subdir $$pathFormatted }}
+{{ $editURL = printf "%s/edit/master/%s/%s" $gh_repo $gh_subdir $pathFormatted }}
 {{ else if .Site.Language.Lang }}
 {{ $editURL = printf "%s/edit/master/content/%s/%s" $gh_repo ($.Site.Language.Lang) $pathFormatted }}
 {{ end }}
